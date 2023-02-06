@@ -72,7 +72,7 @@ for item in imglist:
 
     label = classes['Label']
     varr = predict['Confidences'][0].numpy()
-    value = label[np.argmin(varr)]
+    value = label[np.argmax(varr)]
 
 
     os.makedirs(parent+'/'+str(value), exist_ok=True)
