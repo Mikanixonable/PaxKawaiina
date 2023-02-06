@@ -5,9 +5,13 @@
 anacondaをダウンロードしインストールする
 anaconda promptを起動する。
 「conda create -n lober2」と入力しエンターキーを押す。
+y or nと聞かれるのでyと打つ
 「conda activate lober2」と入力しエンターキーを押す。成功すると(lober2)という表示になる。
+y or nと聞かれるのでyと打つ
 「conda install tensorflow」と入力しエンターキーを押す。(lober2)という表示が出るまで待つ。
+y or nと聞かれるのでyと打つ
 「conda install pillow」と入力しエンターキーを押す。(lober2)という表示が出るまで待つ。
+y or nと聞かれるのでyと打つ
 
 実行
 
