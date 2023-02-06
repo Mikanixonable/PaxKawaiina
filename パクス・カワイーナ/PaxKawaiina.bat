@@ -1,2 +1,2 @@
-call %userprofile%\anaconda3\Scripts\activate.bat lober2
+call %userprofile%\anaconda3\Scripts\activate.bat PaxKwaiina
 python PaxKawaiina.py
