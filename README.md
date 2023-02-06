@@ -1,17 +1,18 @@
-①
+使い方
+
+準備
 anacondaをダウンロードしインストールする
-microsoft lobeをダウンロードしインストールする
+anaconda promptを起動する。
+「conda create -n lober2」と入力しエンターキーを押す。
+「conda activate lober2」と入力しエンターキーを押す。成功すると(lober2)という表示になる。
+「conda install tensorflow」と入力しエンターキーを押す。(lober2)という表示が出るまで待つ。
+「conda install pillow」と入力しエンターキーを押す。(lober2)という表示が出るまで待つ。
 
-②
-anaconda promptを起動し conda create -n lober2と入力しエンターキーを押す。するとlober2という名前の仮想環境が作られる
-anaconda promptで、conda activate lober2と入力しエンターキーを押す。するとlober2が有効化される。成功するとlober2>という表示になる
-anaconda promptでconda install tensorflowと入力しエンターキーを押す。lober2>という表示が出るまで待つ。しばらくすると機械学習ライブラリtensorflowがインストールされる。
-anaconda promptでconda install pillowと入力しエンターキーを押す。lober2>という表示が出るまで待つ。しばらくすると画像処理ライブラリpillowがインストールされる。
+実行
+「パクス・カワイーナ」をダウンロードして、分類したい画像があるフォルダに置く。
+PaxKawaiina.batをダブルクリックする。
+二次絵は「KawaiiPictures」に入り、非二次絵は「Not2D」に入る。jpg,png以外のファイルは「sonota」に入る。
 
-③
-lobeで画像分類モデルを作り、exportメニューからtensorflow設定でエクスポートする
-エクスポートしたモデルが入っているフォルダに、PaxKawaiina.batとPaxKawaiina.pyをコピペする
-エクスポートしたモデルが入っているフォルダを、分類したい画像があるフォルダにコピペする
-PaxKawaiina.batをダブルクリックする
-
-うまくいくと、画像のコピーがフォルダ分けされている。対応していないファイルは「sonota」というフォルダに入れられている。フォルダ分けされるのはファイルのみで、フォルダは無視される。
+二次絵以外へのカスタマイズ
+microsoft lobeやその他の手段でモデルを作成しTensorflow形式でエクスポートする。
+エクスポートしたモデルのjsonがあるフォルダにPaxKawaiina.batとPaxKawaiina.pyをコピーすればそのフォルダをパクス・カワイーナフォルダと同じように使える。
