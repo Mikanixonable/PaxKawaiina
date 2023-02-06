@@ -76,9 +76,9 @@ for item in imglist:
 
 
     os.makedirs(parent+'/'+str(value), exist_ok=True)
-    shutil.copy(img, parent+'/'+str(value))
+    shutil.move(img, parent+'/'+str(value))
 
 for path in unimglist:
     if os.path.isfile(path):
         os.makedirs(parent+'/sonota', exist_ok=True)
-        shutil.copy(path, parent+'/sonota')
+        shutil.move(path, parent+'/sonota')
