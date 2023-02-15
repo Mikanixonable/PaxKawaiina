@@ -25,17 +25,13 @@ microsoft lobeやその他の手段でモデルを作成しTensorflow形式で�
 エクスポートしたモデルのjsonがあるフォルダにPaxKawaiina.batとPaxKawaiina.pyをコピーすればそのフォルダをパクス・カワイーナフォルダと同じように使える。  
 
 
-使用ライブラリのバージョン情報
-主要:
-tensorflow: 2.10.0
-pillow: 9.3.0
+使用ライブラリのバージョン情報 
+主要:  
+tensorflow: 2.10.0  
+pillow: 9.3.0  
 
 全部:
-(PaxKawaiina) C:\Users\8030>conda list
-# packages in environment at C:\Users\8030\anaconda3\envs\PaxKawaiina:
-#
-# Name                    Version                   Build  Channel
-_tflow_select             2.3.0                       mkl
+_tflow_select             2.3.0                       mkl 
 absl-py                   1.3.0           py310haa95532_0
 aiohttp                   3.8.3           py310h2bbff1b_0
 aiosignal                 1.2.0              pyhd3eb1b0_0
