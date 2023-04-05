@@ -6,6 +6,7 @@
 
 anacondaをダウンロードしインストールする  
 anaconda promptを起動する。  
+tensorflowとpillowの入った環境構築
 「conda create -n PaxKawaiina」と入力しエンターキーを押す。  
 y or nと聞かれるのでyと打つ  
 「conda activate PaxKawaiina」と入力しエンターキーを押す。成功すると(PaxKawaiina)という表示になる。  
