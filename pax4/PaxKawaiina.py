@@ -121,7 +121,7 @@ if __name__ == "__main__":
     source_dir = "../"
     dirlist = [source_dir+dire for dire in os.listdir(source_dir) if os.path.isdir(source_dir+dire)]
     
-    dirlist.remove(source_dir+"pax4")
+    dirlist.remove(source_dir+"photo_kawaii_image")
 
     # signature読込
     with open('./signature.json', 'r') as f:
