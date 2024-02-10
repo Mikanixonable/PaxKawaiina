@@ -40,7 +40,6 @@ from tensorflow.keras.preprocessing.image import img_to_array
 import os
 import re
 import shutil
-import glob
 import pyexiv2
 
 def isImg(item):
@@ -88,10 +87,23 @@ def isPhoto(file):
         return True
     except UnicodeDecodeError:
         return False
+    
+def moveTo(oldpath,dirName):
+    os.makedirs(dirName, exist_ok=True)
+    #同名のファイルが既にあったときのファイル名変更措置
+    k = 1
+    fileName0 = os.path.basename(oldpath)
+    while True:
+        if not os.path.isfile(os.path.join(dirName, fileName0)):
+            shutil.move(oldpath, os.path.join(dirName, fileName0))
+            break
+        else:
+            fileName0 = os.path.splitext(fileName0)[0] + "_" + str(k) + os.path.splitext(fileName)[1]
+            k += 1
 
-def moveTo(file,dirname):
-    os.makedirs(dirname, exist_ok=True)
-    shutil.move(file, dirname)  
+def moveToOld(file,dirName):
+    os.makedirs(dirName, exist_ok=True)
+    shutil.move(file, dirName)  
 
 def moveImg(file):
     loc = os.path.dirname(file)
@@ -120,10 +132,7 @@ def eachpax(dir):
         moveImg(file)
 
 if __name__ == "__main__":
-    source_dir = "../"
-    dirlist = [source_dir+dire for dire in os.listdir(source_dir) if os.path.isdir(source_dir+dire)]
-    
-    dirlist.remove(source_dir+"photo_kawaii_image")
+
 
     # signature読込
     with open('./signature.json', 'r') as f:
@@ -136,6 +145,4 @@ if __name__ == "__main__":
     model = tf.saved_model.load('') #ここで時刻がプリントされる
     infer = model.signatures['serving_default']
 
-    # 画像移動
-    for dir in dirlist:
-        eachpax(os.path.abspath(dir))
+    eachpax('../')
